@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SpecializareDTO {
-    private String denumire;
-    private int facultateId;
-    private String facultateDenumire;
+public class SpecializareDTOput {
     private int id;
+    private String denumire;
 }

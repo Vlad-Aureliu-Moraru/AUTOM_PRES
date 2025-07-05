@@ -4,11 +4,13 @@ import com.example.autom_pres.Facultate.Model.Facultate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "specializari")
 @AllArgsConstructor
+@NoArgsConstructor
 public class Specializare {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

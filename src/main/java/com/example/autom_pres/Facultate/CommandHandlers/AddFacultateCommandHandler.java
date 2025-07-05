@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class AddFacultateCommandHandler implements Command <Facultate,ResponseEntity> {
-private FacultatiRepository facultatiRepository;
+private final FacultatiRepository facultatiRepository;
 public AddFacultateCommandHandler(FacultatiRepository facultatiRepository){
     this.facultatiRepository=facultatiRepository;
 }

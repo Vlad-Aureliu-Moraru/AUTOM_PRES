@@ -6,29 +6,39 @@ import com.example.autom_pres.Facultate.CommandHandlers.UpdateFacultateCommandHa
 import com.example.autom_pres.Facultate.Model.Facultate;
 import com.example.autom_pres.Facultate.Model.FacultateDTO;
 import com.example.autom_pres.Facultate.QueryHandlers.GetAllFacultatiQueryHandler;
+import com.example.autom_pres.Facultate.QueryHandlers.GetFacultateQueryHandler;
 import com.example.autom_pres.Student.CommandHandlers.AddStudentCommandHandler;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/facultati")
 public class FacultateController {
-    private GetAllFacultatiQueryHandler  getAllFacultatiQueryHandler;
-    private AddFacultateCommandHandler addFacultateCommandHandler;
-    private UpdateFacultateCommandHandler updateFacultateCommandHandler;
-    private DeleteFacultateCommandHandler deleteFacultateCommandHandler;
+    private final GetAllFacultatiQueryHandler  getAllFacultatiQueryHandler;
+    private final AddFacultateCommandHandler addFacultateCommandHandler;
+    private final UpdateFacultateCommandHandler updateFacultateCommandHandler;
+    private final DeleteFacultateCommandHandler deleteFacultateCommandHandler;
+    private final GetFacultateQueryHandler getFacultateQueryHandler;
 
-    public FacultateController(GetAllFacultatiQueryHandler getAllFacultatiQueryHandler,UpdateFacultateCommandHandler updateFacultateCommandHandler, DeleteFacultateCommandHandler deleteFacultateCommandHandler,AddFacultateCommandHandler addFacultateCommandHandler) {
+    public FacultateController(GetAllFacultatiQueryHandler getAllFacultatiQueryHandler,GetFacultateQueryHandler getFacultateQueryHandler,UpdateFacultateCommandHandler updateFacultateCommandHandler, DeleteFacultateCommandHandler deleteFacultateCommandHandler,AddFacultateCommandHandler addFacultateCommandHandler) {
         this.getAllFacultatiQueryHandler = getAllFacultatiQueryHandler;
         this.addFacultateCommandHandler= addFacultateCommandHandler;
         this.updateFacultateCommandHandler = updateFacultateCommandHandler;
         this.deleteFacultateCommandHandler = deleteFacultateCommandHandler;
+        this.getFacultateQueryHandler = getFacultateQueryHandler;
     }
 
     @GetMapping
     public ResponseEntity getFacultate(){
         return getAllFacultatiQueryHandler.execute(null);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Facultate> getFacultateById(@PathVariable Integer id){
+        return getFacultateQueryHandler.execute(id);
     }
 
     @PostMapping
