@@ -1,47 +1,5 @@
 -----
 
-# 🚀 Smart Presence System
-
-A modern and intuitive web-based system designed to streamline student attendance tracking for courses and events. This project offers distinct interfaces for students and lecturers, ensuring a seamless and efficient presence management experience.
-
------
-
-## ✨ Features
-
-### For Students
-
-  * **Effortless Check-in:** Simply open your browser; the system automatically detects your presence if your MAC address is recognized.
-  * **First-time Registration:** New students are prompted to register with their name, surname, group, and year if their MAC address isn't found.
-  * **Presence Confirmation:** Enjoy a delightful animation and vibration feedback upon successful check-in.
-  * **CRUD Operations:** Students can be created, deleted, updated, and retrieved within the system.
-  * **Mark as Present:** Students can be specifically marked as present in a class.
-
-### For Lecturers
-
-  * **Course Management:** Easily create, update, and delete courses.
-  * **Event Creation:** Beyond courses, lecturers can create special events with unique names.
-  * **Automated Course Assignment:** Classes are automatically fetched and assigned to their respective lecturers.
-  * **Presence Monitoring:**
-      * Create a "Presence Session" for a specific course or event.
-      * Set the duration for student check-ins (default: 2 hours).
-      * Receive real-time notifications on student presence.
-      * Courses automatically close for presence after the defined time.
-  * **Personalized Greeting:** Lecturers are greeted by name upon login.
-
-### General
-
-  * **Comprehensive Presence Analytics:**
-      * Get presence by student.
-      * Get presence by lecturer.
-      * Get presence by date.
-      * View average presence.
-      * Filter presence by group.
-      * Filter presence by year.
-
------
------
-
-## 🗄️ Database Schema
 
 ### `STUDENT` Table
 
@@ -79,7 +37,6 @@ A modern and intuitive web-based system designed to streamline student attendanc
 
 -----
 
-## 🚦 Workflow
 
 1.  **Landing Page:** Users choose between "Student" or "Professor."
 2.  **Student Flow:**
@@ -95,27 +52,4 @@ A modern and intuitive web-based system designed to streamline student attendanc
           * Enable/disable notifications on student presence.
 4.  **Public Statistics:** If neither "Student" nor "Professor" is chosen, a static view of presence statistics is displayed.
 
------
 
-## 🛠️ Installation & Setup (Placeholder)
-
-Detailed instructions for setting up the project locally will go here, including:
-
-  * Cloning the repository
-  * Installing dependencies (backend and frontend)
-  * Database setup and migration
-  * Running the development servers
-
------
-
-## 🤝 Contributing
-
-We welcome contributions\! Please see our `CONTRIBUTING.md` for guidelines.
-
------
-
-## 📜 License
-
-This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
-
------
