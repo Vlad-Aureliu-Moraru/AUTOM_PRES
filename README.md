@@ -38,18 +38,4 @@
 -----
 
 
-1.  **Landing Page:** Users choose between "Student" or "Professor."
-2.  **Student Flow:**
-      * If the user's MAC address is in the database, they are automatically marked as present for the current course and shown a confirmation animation.
-      * If the MAC address is new, a registration form (Name, Surname, Group, Year) is prompted.
-3.  **Professor Flow:**
-      * A login form is displayed.
-      * Upon successful login, the professor is greeted by name.
-      * Options appear to:
-          * Create a "Presence Session" for an existing course (selecting from a list if multiple courses exist).
-          * Create a new "Event."
-          * Set the duration for the presence session (default 2 hours).
-          * Enable/disable notifications on student presence.
-4.  **Public Statistics:** If neither "Student" nor "Professor" is chosen, a static view of presence statistics is displayed.
-
 
